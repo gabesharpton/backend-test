@@ -1,8 +1,10 @@
 <h2>Task <a href="">(+)</a></h2>
 <ul>
-  {% for task in tasks %}
+  {% for tasks in task %}
   <li>
-    <a href="">{{ task.author }}</a>
+    <h1 href="">{{ tasks.author }}</h1>
+    <h1>{{tasks.task}}</h1>
+    <h2>Assigned to: {{tasks.assigned}}</h2>
   </li>
   {% endfor %}
 </ul>
