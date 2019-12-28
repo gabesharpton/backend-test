@@ -2,6 +2,8 @@
 
 from django.db import migrations, models
 
+def create_data(apps,schema_editor):
+    Task = apps.get_model('task', 'Task')
 
 class Migration(migrations.Migration):
 

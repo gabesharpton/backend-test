@@ -1,4 +1,13 @@
+{% load static %}
+<html>
+    
+    <head>
+        <title>Project Tracker</title>
+        <link rel="stylesheet" href="{% static 'css/base.css' %} " />
+    </head>
+    <body>
 <h2>Task <a href="">(+)</a></h2>
+<div class="needsDone" style="background-color: red;">
 <ul>
   {% for tasks in task %}
   <li>
@@ -8,3 +17,16 @@
   </li>
   {% endfor %}
 </ul>
+</div>
+<div class="inProgress" style="background-color: yellow;">
+    {% for tasks in task %}
+<h2>{{tasks.task}}</h2>
+{% endfor %}
+</div>
+
+<div class="finished" style="background-color: green;">
+    {% for tasks in task %}
+    <h3>{{tasks.assigned}}</h3>
+    {% endfor %}</div>
+</body>
+    </html>
